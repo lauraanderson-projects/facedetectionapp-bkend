@@ -1,5 +1,12 @@
 const handleRegister = (req, res, db, bcrypt) => {
   const { name, email, password } = req.body;
+  const passwordPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+  if (!passwordPattern.test(password)) {
+    return res
+      .status(400)
+      .json("Password does not meet security requirements.");
+  }
   if (!name || !email || !password) {
     return res.status(400).json("Incorrect form submission");
   }

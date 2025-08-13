@@ -1,7 +1,7 @@
 Clarifai Image - Face Detection
 https://clarifai.com/clarifai/main/models/face-detection
 
-New Clarifai with gRPC
+New Clarifai with gRPC: Not implemented
 https://www.imaginarycloud.com/blog/grpc-vs-rest
 
 Note:
