@@ -1,4 +1,4 @@
-require("dotenv").config({ path: "./server/.env" });
+require("dotenv").config({ path: "./.env" });
 
 const express = require("express");
 const fetch = (...args) =>
@@ -28,7 +28,15 @@ const db = knex({
 });
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://facedetectionapp-m8fw.onrender.com", // your frontend domain
+  })
+);
+
+// OR allow all origins temporarily (not for production security)
+//app.use(cors());
+
 app.use(express.json());
 
 //const CLARIFAI_API_KEY = process.env.CLARIFAI_API_KEY;

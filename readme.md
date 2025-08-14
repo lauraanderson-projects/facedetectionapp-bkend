@@ -22,3 +22,6 @@ ID serial PRIMARY KEY,
 hash VARCHAR (100) NOT NULL,
 email text UNIQUE NOT NULL
 );
+
+Tutorial for Render host
+https://medium.com/@vanessavun/migrating-your-full-stack-react-app-from-heroku-to-render-9d7901d42e85
