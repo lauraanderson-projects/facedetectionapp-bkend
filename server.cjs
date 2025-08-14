@@ -36,9 +36,6 @@ app.use(
 
 // Use Render’s provided PORT
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
 
 // OR allow all origins temporarily (not for production security)
 //app.use(cors());
