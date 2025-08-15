@@ -12,7 +12,6 @@ const handleRegister = (req, res, db, bcrypt) => {
   }
   const saltRounds = 10;
   const hash = bcrypt.hashSync(password, saltRounds);
-  console.log("Hash generated:", hash);
   // Store hash in your password DB
   db.transaction((trx) => {
     trx
