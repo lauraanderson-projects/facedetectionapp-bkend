@@ -31,6 +31,16 @@ const app = express();
 app.use(
   cors({
     origin: "https://facedetectionapp-m8fw.onrender.com", // your frontend domain
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-Requested-With",
+      "Accept",
+      "Access-Control-Allow-Origin",
+      "Origin",
+    ],
   })
 );
 
