@@ -19,11 +19,8 @@ const clarifaiimage = require("./controllers/clarifaiimage.js");
 const db = knex({
   client: "pg",
   connection: {
-    client: "pg",
-    connection: {
-      connectionString: process.env.DB_HOST,
-      ssl: { rejectUnauthorized: false },
-    },
+    connectionString: process.env.DATABASE_URL, // ✅ full URL from Render
+    ssl: { rejectUnauthorized: false },
   },
 });
 
